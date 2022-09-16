@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <title>
+        Login Page
+    </title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/favicon.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTFJr5UOOaPwvqBnRMem5FC-m3gU_aAHs9iw&usqp=CAU");
+            background-size: cover;
+        }
+        
+        form {
+            width: 40%;
+            margin: 90px 150px;
+        }
+        
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        
+        .container {
+            padding: 15px;
+            /* background-color: white; */
+            /* opacity: 0.6; */
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        
+        .signup {
+            float: right;
+        }
+        
+        h1 {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        label,
+        p,
+        b {
+            color: whitesmoke;
+        }
+        
+        b:hover {
+            color: blue;
+        }
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <h1>Login to your Account</h1><br>
+            <p class="signup">For new account <a href="../register/register.html"><b>Sign Up</b></a> here</p>
+            <p>Please Enter Your Details.</p>
+
+            <hr>
+
+            <label for="uname"><b>Username</b></label>
+            <input id="emailID" type="email" placeholder="Enter Username" name="uname" required>
+            <br><br>
+
+            <label for="psw "><b>Password</b></label>
+            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+            <button onclick="login()">Login</button>
+            <label>
+      <input type="checkbox" name="remember"> Remember me
+    </label>
+        </div>
+
+        <div class="container">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw"><a style="color:white ;" href="#">Forgot Password?</a></span>
+        </div>
+    </form>
+    <script>
+        function login() {
+            event.preventDefault();
+
+            var db_details = {
+                email: "siddamvamsee@gmail.com",
+                password: "saivamsee",
+                mobile: 9866850135
+            }
+            var email = document.getElementById("emailID").value;
+            var password = document.getElementById("password").value;
+            if (email === "" && password === "") {
+                alert("Please Enter Credentials")
+            } else {
+                (email === db_details.email || email === db_details.mobile) && password === db_details.password ? success() : failure()
+
+            }
+
+
+            function success() {
+                confirm("Successfully Logged In!!");
+                window.location.href = "../home/index.html"
+            }
+
+            function failure() {
+                alert("Login Failure!!\nPlease retry with Correct Details.");
+                document.getElementById(emailID).value = "";
+                document.getElementById(password).value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

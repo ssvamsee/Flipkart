@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Contact Page
+    </title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/favicon.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: grey;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            padding: 16px;
+            background-color: white;
+            width: 50%;
+            height: 100%;
+            margin-left: 400px;
+            /* margin-top: 50px; */
+        }
+        
+        input[type=text],
+        input[type=date],
+        input[type=number] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        input[type=text]:focus,
+        input[type=date]:focus,
+        input[type=number]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        .contactus {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .contactus:hover {
+            opacity: 1;
+        }
+        
+        a {
+            color: dodgerblue;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(17, 1, 32);
+            color: rgb(224, 224, 224);
+            font-size: 12px;
+        }
+        
+        .footer {
+            text-align: left;
+            width: 30%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div class="container">
+            <h1>Contact</h1>
+            <p>For all enquires, please contact us by filling below details</p>
+            <hr>
+            <label for="name"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+
+            <label for="mobile"><b>Mobile No</b></label>
+            <input type="number" placeholder="Enter Mobile Number" name="number" id="number" required>
+
+
+            <hr>
+
+            <button type="submit" class="contactus">Contact Us</button>
+        </div>
+
+
+    </form>
+    <br>
+    <br>
+    <table>
+        <h2 style="text-align: center;">Contact Details</h2>
+        <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Vamsee</td>
+            <td>12356789</td>
+            <td>India</td>
+        </tr>
+        <tr>
+            <td>Vamsee</td>
+            <td>12356789</td>
+            <td>India</td>
+        </tr>
+        <tr>
+            <td>Vamsee</td>
+            <td>12356789</td>
+            <td>India</td>
+        </tr>
+        <tr>
+            <td>Vamsee</td>
+            <td>12356789</td>
+            <td>India</td>
+        </tr>
+
+
+    </table>
+    <br><br>
+    <footer>
+        <div class="footer">
+            <p>Author: Siddam Vamsee<br>
+                <a href="mailto:siddamvamsee@gmail.com">siddamvamsee@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            <p>Mail Us:<br> Flipkart Internet Private Limited,<br> Buildings Alyssa, <br>Begonia & Clove Embassy Tech Village,<br> Outer Ring Road,<br> Devarabeesanahalli Village,<br> Bengaluru, 560103, <br>Karnataka, India</p>
+        </div>
+        <div class="footer">
+            <p>Registered Office Address: <br>Flipkart Internet Private Limited,<br> Buildings Alyssa,<br> Begonia & Clove Embassy Tech Village,<br> Outer Ring Road,<br> Devarabeesanahalli Village,<br> Bengaluru, 560103,<br> Karnataka,<br> India <br> CIN
+                : U51109KA2012PTC066107 <br> Telephone: 9866850135</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
